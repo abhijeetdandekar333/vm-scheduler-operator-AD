@@ -1,0 +1,65 @@
+domain: xyzcompany.com
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: vm-scheduler-operator-ad
+repo: github.com/abhijeetdandekar333/vm-scheduler-operator-ad
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: aws
+  kind: AWSVMSchedulerStartad
+  path: github.com/abhijeetdandekar333/vm-scheduler-operator-ad/apis/aws/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: azure
+  kind: AzureVMSchedulerStartad
+  path: github.com/abhijeetdandekar333/vm-scheduler-operator-ad/apis/azure/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: gcp
+  kind: GCPVMSchedulerStartad
+  path: github.com/abhijeetdandekar333/vm-scheduler-operator-ad/apis/gcp/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: aws
+  kind: AWSVMSchedulerStopad
+  path: github.com/abhijeetdandekar333/vm-scheduler-operator-ad/apis/aws/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: azure
+  kind: AzureVMSchedulerStopad
+  path: github.com/abhijeetdandekar333/vm-scheduler-operator-ad/apis/azure/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: xyzcompany.com
+  group: gcp
+  kind: GCPVMSchedulerStopad
+  path: github.com/abhijeetdandekar333/vm-scheduler-operator-ad/apis/gcp/v1
+  version: v1
+version: "3"

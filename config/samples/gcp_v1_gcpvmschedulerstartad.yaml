@@ -1,0 +1,12 @@
+apiVersion: gcp.xyzcompany.com/v1
+kind: GCPVMSchedulerStartad
+metadata:
+  labels:
+    app.kubernetes.io/name: gcpvmschedulerstartad
+    app.kubernetes.io/instance: gcpvmschedulerstartad-sample
+    app.kubernetes.io/part-of: vm-scheduler-operator-ad
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: vm-scheduler-operator-ad
+  name: gcpvmschedulerstartad-sample
+spec:
+  # TODO(user): Add fields here

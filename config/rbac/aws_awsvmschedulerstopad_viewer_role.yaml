@@ -1,0 +1,27 @@
+# permissions for end users to view awsvmschedulerstopads.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: awsvmschedulerstopad-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: vm-scheduler-operator-ad
+    app.kubernetes.io/part-of: vm-scheduler-operator-ad
+    app.kubernetes.io/managed-by: kustomize
+  name: awsvmschedulerstopad-viewer-role
+rules:
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstopads
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstopads/status
+  verbs:
+  - get

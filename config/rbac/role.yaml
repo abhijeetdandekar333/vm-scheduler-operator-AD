@@ -1,0 +1,176 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstartads
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstartads/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstartads/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstopads
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstopads/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - aws.xyzcompany.com
+  resources:
+  - awsvmschedulerstopads/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstartads
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstartads/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstartads/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstopads
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstopads/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - azure.xyzcompany.com
+  resources:
+  - azurevmschedulerstopads/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - batch
+  resources:
+  - cronjobs
+  - jobs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - gcp.xyzcompany.com
+  resources:
+  - gcpvmschedulerstartads
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - gcp.xyzcompany.com
+  resources:
+  - gcpvmschedulerstartads/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - gcp.xyzcompany.com
+  resources:
+  - gcpvmschedulerstartads/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - gcp.xyzcompany.com
+  resources:
+  - gcpvmschedulerstopads
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - gcp.xyzcompany.com
+  resources:
+  - gcpvmschedulerstopads/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - gcp.xyzcompany.com
+  resources:
+  - gcpvmschedulerstopads/status
+  verbs:
+  - get
+  - patch
+  - update
