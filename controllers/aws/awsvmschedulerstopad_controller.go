@@ -231,6 +231,10 @@ func (r *AWSVMSchedulerStopadReconciler) cronJobForAWSVMSchedulerStopad(awsVMSch
 										Value: awsVMScheduler.Spec.InstanceIds,
 									},
 									{
+										Name:  "ec2_command",
+										Value: awsVMScheduler.Spec.Command,
+									},
+									{
 										Name: "AWS_ACCESS_KEY_ID",
 										ValueFrom: &corev1.EnvVarSource{
 											SecretKeyRef: &corev1.SecretKeySelector{

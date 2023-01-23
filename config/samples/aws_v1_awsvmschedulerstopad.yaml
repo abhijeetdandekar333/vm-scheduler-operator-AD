@@ -11,13 +11,23 @@ metadata:
 spec:
   # TODO(user): Add fields here
     # Provide image name
-  image: "quay.io/manoj_dhanorkar/awsvmscheduler:v1.0"
   
-  # Provide comma separated list of AWS instance ids which will be scheduled by CR 
+  image: "quay.io/manoj_dhanorkar/awsvmscheduler:v1.0"
+  # # Provide comma separated list of AWS instance ids which will be scheduled by CR 
   instanceIds: "i-007052640f6a6373c"
 
 
   # Schedule period for the CronJob.
   # This spec allow you to setup the stop schedule for VM
   # Default: "0 18 * * *" # every weekday at 6 PM
-  stopSchedule: "0 18 * * 1-5"
+  stopSchedule: "30 12 * * 1-5"
+
+  ec2_command: "stop"
+
+
+
+
+
+
+
+  

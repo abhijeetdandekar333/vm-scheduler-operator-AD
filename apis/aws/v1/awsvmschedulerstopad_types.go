@@ -33,11 +33,16 @@ type AWSVMSchedulerStopadSpec struct {
 	// Comma separated list of AWS instance ids which will be scheduled by CR
 	InstanceIds string `json:"instanceIds"`
 
+	// Command string `json:"command"`
+
+	// Args string `json:"args"`
 	// Schedule period for the CronJob.
 	// This spec allows you to setup the stop schedule for VM
 	StopSchedule string `json:"stopSchedule"`
 
 	Image string `json:"image"`
+
+	Command string `json:"ec2_command"`
 }
 
 // AWSVMSchedulerStopadStatus defines the observed state of AWSVMSchedulerStopad

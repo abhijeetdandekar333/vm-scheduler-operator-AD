@@ -36,6 +36,8 @@ spec:
           spec:
             description: AWSVMSchedulerStopadSpec defines the desired state of AWSVMSchedulerStopad
             properties:
+              ec2_command:
+                type: string
               image:
                 type: string
               instanceIds:
@@ -45,10 +47,11 @@ spec:
                   by CR
                 type: string
               stopSchedule:
-                description: Schedule period for the CronJob. This spec allows you
-                  to setup the stop schedule for VM
+                description: Args string `json:"args"` Schedule period for the CronJob.
+                  This spec allows you to setup the stop schedule for VM
                 type: string
             required:
+            - ec2_command
             - image
             - instanceIds
             - stopSchedule
